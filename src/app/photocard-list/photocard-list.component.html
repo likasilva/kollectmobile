@@ -1,0 +1,15 @@
+<ion-card *ngFor="let card of photocards">
+  <ion-item>
+    <ion-avatar slot="start">
+      <img [src]="card.owner.imageUrl">
+    </ion-avatar>
+    <ion-label>
+      <h3>{{card.owner.name}}</h3>
+      <p>{{card.createdAt | date}}</p>
+    </ion-label>
+  </ion-item>
+  <img [src]="card.imageUrl" alt="ion">
+  <ion-card-header>
+    <ion-card-title>{{ card.name }}</ion-card-title>
+  </ion-card-header>
+</ion-card>
